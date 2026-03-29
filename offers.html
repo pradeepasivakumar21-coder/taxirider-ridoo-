@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo Offers 🎁</title>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI";margin:0;padding:0;}
+body{background:#f4f6f8;}
+
+.head{
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+text-align:center;
+padding-top:20px;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.navbar a:hover{
+color:#FFD700;
+}
+
+.goog-te-combo{
+padding:3px;
+border-radius:5px;
+font-size:12px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:25px;
+margin:60px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:25px;
+width:260px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+}
+
+.code{
+font-size:22px;
+font-weight:bold;
+color:#FFD700;
+margin:10px 0;
+}
+
+button{
+margin-top:10px;
+padding:10px 20px;
+background:#FFD700;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#c9a100;
+color:white;
+}
+
+.bottom-left{
+position:fixed;
+bottom:0;
+left:0;
+width:240px;
+}
+
+.bottom-right{
+position:fixed;
+bottom:0;
+right:0;
+width:240px;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en',includedLanguages:'en,ta'},
+'google_translate_element');
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>Offers & Discounts</h4>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="bookingp.html">Booking</a>
+<a href="offers.html">Offers</a>
+<span style="margin-left:20px;color:white;">🌐</span>
+<span id="google_translate_element"></span>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h2>🎁 Special Offer</h2>
+<div class="code">RIDOO50</div>
+<p>Get ₹50 off on your ride</p>
+<button onclick="apply('RIDOO50')">Apply</button>
+</div>
+
+<div class="card">
+<h2>🚀 First Ride</h2>
+<div class="code">FIRST100</div>
+<p>₹100 off for new users</p>
+<button onclick="apply('FIRST100')">Apply</button>
+</div>
+
+<div class="card">
+<h2>🎉 Weekend Deal</h2>
+<div class="code">WEEKEND20</div>
+<p>20% discount on weekends</p>
+<button onclick="apply('WEEKEND20')">Apply</button>
+</div>
+
+<div class="card">
+<h2>💥 Mega Offer</h2>
+<div class="code">SAVE200</div>
+<p>Flat ₹200 off on long rides</p>
+<button onclick="apply('SAVE200')">Apply</button>
+</div>
+
+</div>
+
+<script>
+function apply(code){
+alert("✅ Coupon " + code + " Applied!");
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

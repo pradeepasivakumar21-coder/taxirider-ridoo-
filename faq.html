@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo FAQ ❓</title>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI";margin:0;padding:0;}
+body{background:#f4f6f8;}
+
+.head{
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+text-align:center;
+padding-top:20px;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.navbar a:hover{
+color:#FFD700;
+}
+
+.goog-te-combo{
+padding:3px;
+border-radius:5px;
+font-size:12px;
+}
+
+.faq{
+width:700px;
+margin:60px auto;
+}
+
+.q{
+background:white;
+padding:15px;
+margin-bottom:10px;
+border-radius:10px;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.q:hover{
+transform:scale(1.02);
+}
+
+.a{
+display:none;
+padding:10px 15px;
+background:#fff;
+border-left:4px solid #FFD700;
+margin-bottom:10px;
+border-radius:0 0 10px 10px;
+}
+
+.q.active + .a{
+display:block;
+}
+
+.bottom-left{
+position:fixed;
+bottom:0;
+left:0;
+width:240px;
+}
+
+.bottom-right{
+position:fixed;
+bottom:0;
+right:0;
+width:240px;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en',includedLanguages:'en,ta'},
+'google_translate_element');
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>Help & FAQ</h4>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="bookingp.html">Booking</a>
+<a href="cont.html">Contact</a>
+<a href="faq.html">FAQ</a>
+<span style="margin-left:20px;color:white;">🌐</span>
+<span id="google_translate_element"></span>
+</nav>
+
+<div class="faq">
+
+<div class="q" onclick="toggle(this)">How to book a ride?</div>
+<div class="a">Go to booking page, fill your details and confirm.</div>
+
+<div class="q" onclick="toggle(this)">Can I cancel ride?</div>
+<div class="a">Yes, you can cancel before driver reaches your location.</div>
+
+<div class="q" onclick="toggle(this)">What payment methods are available?</div>
+<div class="a">You can pay using UPI, Debit/Credit Card or Cash.</div>
+
+<div class="q" onclick="toggle(this)">How can I track my ride?</div>
+<div class="a">Go to Track Ride page to see driver status.</div>
+
+<div class="q" onclick="toggle(this)">Are rides safe?</div>
+<div class="a">Yes, all drivers are verified and rides are monitored.</div>
+
+<div class="q" onclick="toggle(this)">Is RIDoo available 24/7?</div>
+<div class="a">Yes, RIDoo operates all day and night.</div>
+
+<div class="q" onclick="toggle(this)">How to contact support?</div>
+<div class="a">Visit contact page or use help desk email.</div>
+
+</div>
+
+<script>
+function toggle(e){
+e.classList.toggle("active");
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

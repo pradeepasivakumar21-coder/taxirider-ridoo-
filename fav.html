@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo Favorites 📍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{box-sizing:border-box;font-family:"Poppins","Segoe UI";margin:0;padding:0;}
+body{background:#f4f6f8;}
+
+.head{
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+text-align:center;
+padding-top:20px;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 18px;
+font-size:17px;
+font-weight:600;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#FFD700;
+transform:scale(1.1);
+}
+
+#google_translate_element{
+display:inline-block;
+}
+
+.goog-te-combo{
+padding:5px;
+border-radius:5px;
+font-size:14px;
+}
+
+.box{
+width:500px;
+margin:60px auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.loc{
+background:#f9f9f9;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.loc:hover{
+background:#FFD700;
+}
+
+.add{
+display:flex;
+margin-top:20px;
+gap:10px;
+}
+
+.add input{
+flex:1;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.add button{
+padding:10px 15px;
+background:#FFD700;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.bottom-left{position:fixed;bottom:0;left:0;width:240px;}
+.bottom-right{position:fixed;bottom:0;right:0;width:240px;}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'en,ta'
+        },
+        'google_translate_element'
+    );
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>Favorite Locations</h4>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="bookingp.html">Booking</a>
+
+<span style="margin-left:15px;">
+🌐 <span id="google_translate_element"></span>
+</span>
+</nav>
+
+<div class="box">
+
+<h2>Saved Places</h2>
+
+<div id="list">
+<div class="loc" onclick="go()">🏠 Home - Vellore</div>
+<div class="loc" onclick="go()">🏫 College - VIT</div>
+</div>
+
+<div class="add">
+<input type="text" id="newloc" placeholder="Add new place">
+<button onclick="add()">➕</button>
+</div>
+
+</div>
+
+<script>
+function go(){
+location.href="bookingp.html";
+}
+
+function add(){
+let val=document.getElementById("newloc").value;
+
+if(val==="") return;
+
+let div=document.createElement("div");
+div.className="loc";
+div.innerHTML="📍 "+val;
+div.onclick=go;
+
+document.getElementById("list").appendChild(div);
+
+document.getElementById("newloc").value="";
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo Fare Calculator 💰</title>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI";margin:0;padding:0;}
+body{background:#f4f6f8;}
+
+.head{
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+text-align:center;
+padding-top:20px;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-size:17px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.navbar a:hover{
+color:#FFD700;
+}
+
+.goog-te-combo{
+padding:3px;
+border-radius:5px;
+font-size:12px;
+}
+
+.box{
+width:420px;
+margin:80px auto;
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px 20px;
+background:#FFD700;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#c9a100;
+color:white;
+}
+
+#result{
+margin-top:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+.bottom-left{
+position:fixed;
+bottom:0;
+left:0;
+width:240px;
+}
+
+.bottom-right{
+position:fixed;
+bottom:0;
+right:0;
+width:240px;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en',includedLanguages:'en,ta'},
+'google_translate_element');
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>Fare Calculator</h4>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="bookingp.html">Booking</a>
+<a href="fare.html">Fare</a>
+<span style="margin-left:20px;color:white;">🌐</span>
+<span id="google_translate_element"></span>
+</nav>
+
+<div class="box">
+<h2>Calculate Your Fare</h2>
+
+<input type="number" id="km" placeholder="Enter distance (km)">
+<button onclick="calc()">Calculate</button>
+
+<div id="result"></div>
+</div>
+
+<script>
+function calc(){
+let km=document.getElementById("km").value;
+
+if(km===""){
+document.getElementById("result").innerHTML="⚠ Enter distance";
+return;
+}
+
+let fare=50 + (km*10);
+document.getElementById("result").innerHTML="💰 Total Fare: ₹"+fare;
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

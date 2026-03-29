@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo 🚕 | Register</title>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{
+box-sizing:border-box;
+font-family:"Segoe UI", Arial, sans-serif;
+margin:0;
+padding:0;
+}
+
+body{
+background:#f4f6f8;
+}
+
+.head{
+width:100%;
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+text-align:center;
+padding-top:20px;
+}
+
+.hero{
+text-align:center;
+padding:50px 20px;
+background:linear-gradient(120deg,#232526,#414345);
+color:white;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-size:17px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.navbar a:hover{
+color:#FFD700;
+}
+
+#google_translate_element{
+display:inline-block;
+margin-left:10px;
+}
+
+.goog-te-combo{
+padding:3px;
+border-radius:5px;
+font-size:12px;
+margin-left:5px;
+}
+
+.login-section{
+display:flex;
+justify-content:center;
+padding:60px 20px;
+}
+
+.login-card{
+background:white;
+width:800px;
+border-radius:20px;
+padding:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.login-form{
+width:320px;
+text-align:center;
+}
+
+.login-form input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.login-form input:focus{
+border-color:#FFD700;
+outline:none;
+}
+
+.login-form input[type="submit"]{
+background:#FFD700;
+border:none;
+padding:10px 22px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.login-form input[type="submit"]:hover{
+background:#c9a100;
+color:white;
+}
+
+.side-img{
+width:150px;
+border-radius:10px;
+}
+
+.bottom-left{
+position:fixed;
+bottom:0;
+left:0;
+width:240px;
+}
+
+.bottom-right{
+position:fixed;
+bottom:0;
+right:0;
+width:240px;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en',includedLanguages:'en,ta'},
+'google_translate_element'
+);
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>...On Time, Every Time...</h4>
+</div>
+
+<section class="hero">
+<h1>Create Account 🚖</h1>
+<p>Join RIDoo Today</p>
+</section>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="loginp.html">Login</a>
+<a href="ser.html">Service</a>
+<a href="bookingp.html">Booking</a>
+<a href="abou.html">About Us</a>
+<a href="cont.html">Contact</a>
+
+<div style="display:flex;align-items:center;margin-left:15px;">
+<span style="color:white;">🌐</span>
+<span id="google_translate_element"></span>
+</div>
+</nav>
+
+<section class="login-section">
+<div class="login-card">
+
+<img src="images (1).jfif" class="side-img">
+
+<div class="login-form">
+<h2>Register</h2>
+
+<form id="registerForm" onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="text" id="address" placeholder="Address" required>
+<input type="number" id="age" placeholder="Age" required>
+<input type="date" id="dob" required>
+<input type="email" id="email" placeholder="Email ID" required>
+<input type="password" id="password" placeholder="Create Password" required>
+
+<input type="submit" value="Create Account">
+
+</form>
+
+</div>
+
+<img src="images.jfif" class="side-img">
+
+</div>
+</section>
+
+<script>
+function validateForm(){
+var form = document.getElementById("registerForm");
+
+if(form.checkValidity()){
+alert("Account Created Successfully ✅");
+window.location.href="bookingp.html";
+return false;
+}else{
+alert("Please fill all required fields ❗");
+return false;
+}
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

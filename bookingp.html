@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo Booking 🚕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    font-family:"Poppins","Segoe UI", Arial, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:#f4f6f8;
+    overflow-x:hidden;
+}
+
+.head{
+    height:120px;
+    background:linear-gradient(90deg,#232526,#414345);
+    color:#FFD700;
+    text-align:center;
+    padding-top:20px;
+}
+
+.hero{
+    text-align:center;
+    padding:50px;
+    background:linear-gradient(120deg,#232526,#414345);
+    color:white;
+}
+
+.navbar{
+    background:#111;
+    padding:14px;
+    text-align:center;
+}
+
+.navbar a{
+    color:white;
+    margin:0 18px;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#FFD700;
+    transform:scale(1.1);
+}
+
+#google_translate_element{
+    display:inline-block;
+}
+
+.goog-te-combo{
+    padding:5px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+.booking-box{
+    width:800px;
+    background:white;
+    margin:60px auto;
+    border-radius:20px;
+    display:flex;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    overflow:hidden;
+}
+
+.booking-img{width:50%;}
+.booking-img img{width:100%;height:100%;object-fit:cover;}
+
+.booking-form{
+    width:50%;
+    padding:30px;
+}
+
+.booking-form input,
+.booking-form select{
+    width:100%;
+    padding:10px;
+    margin-bottom:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.booking-form button{
+    width:100%;
+    padding:12px;
+    background:#FFD700;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.booking-form button:hover{
+    background:#c9a100;
+    color:white;
+}
+
+.action-buttons{
+    text-align:center;
+    margin-top:20px;
+}
+
+.action-buttons button{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.fare-btn{background:#FFD700;}
+.safety-btn{background:red;color:white;}
+
+.bottom-left{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:240px;
+}
+
+.bottom-right{
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:240px;
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'en,ta'
+        },
+        'google_translate_element'
+    );
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>...On Time, Every Time...</h4>
+</div>
+
+<section class="hero">
+<h1>Book Your Ride 🚖</h1>
+<p>Fast • Safe • Affordable</p>
+</section>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="loginp.html">Login</a>
+<a href="ser.html">Service</a>
+<a href="bookingp.html">Booking</a>
+<a href="abou.html">About Us</a>
+<a href="cont.html">Contact</a>
+
+<span style="margin-left:15px;">
+🌐 <span id="google_translate_element"></span>
+</span>
+</nav>
+
+<div class="booking-box">
+
+<div class="booking-img">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkPVivg2VFkg1KggfjtuTI305yR23KcZw7-mriuXxSKA&s">
+</div>
+
+<div class="booking-form">
+
+<h2>Book Your Ride</h2>
+
+<form id="bookingForm">
+
+<input type="date" required>
+<input type="time" required>
+
+<input type="text" placeholder="Pickup Location" required>
+<input type="text" placeholder="Drop Location" required>
+
+<select id="vehicle" required>
+<option value="">Select Vehicle</option>
+<option>Two Wheeler 🛵</option>
+<option>Four Wheeler 🚗</option>
+</select>
+
+<input type="number" placeholder="Passengers" required>
+
+<select id="payment" required>
+<option value="">Payment Mode</option>
+<option value="online">Online 💳</option>
+<option value="offline">Offline 💵</option>
+</select>
+
+<button type="button" onclick="confirmBooking()">Confirm Booking</button>
+
+</form>
+
+</div>
+</div>
+
+<div class="action-buttons">
+
+<button class="fare-btn" onclick="location.href='fare.html'">
+💰 Fare Calculator
+</button>
+
+<button class="safety-btn" onclick="location.href='safety.html'">
+🚨 Safety
+</button>
+
+</div>
+
+<script>
+function calcFare(){
+let v=document.getElementById("vehicle").value;
+if(v.includes("Two")) return 100;
+else return 200;
+}
+
+function confirmBooking(){
+
+let form=document.getElementById("bookingForm");
+
+if(!form.checkValidity()){
+alert("⚠ Fill all details!");
+return;
+}
+
+let pay=document.getElementById("payment").value;
+let fare=calcFare();
+
+if(pay=="online"){
+localStorage.setItem("fare",fare);
+location.href="payment.html";
+}
+else{
+let otp=Math.floor(1000+Math.random()*9000);
+alert("📲 Your OTP: "+otp);
+alert("✅ Booking Confirmed (Pay Offline)");
+}
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

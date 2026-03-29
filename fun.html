@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo Fun Zone 🎮</title>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI";margin:0;padding:0;}
+body{background:#f4f6f8;text-align:center;}
+
+.head{
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+padding-top:20px;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+}
+
+.navbar a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.navbar a:hover{
+color:#FFD700;
+}
+
+.goog-te-combo{
+padding:3px;
+border-radius:5px;
+font-size:12px;
+}
+
+.game-box{
+width:400px;
+margin:80px auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+input{
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+width:80%;
+margin-top:10px;
+}
+
+button{
+padding:10px 20px;
+background:#FFD700;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin:10px;
+font-weight:bold;
+}
+
+button:hover{
+background:#c9a100;
+color:white;
+}
+
+#msg{
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
+}
+
+#attempts{
+margin-top:10px;
+color:#555;
+}
+
+.win{
+color:green;
+font-size:22px;
+}
+
+.bottom-left{position:fixed;bottom:0;left:0;width:240px;}
+.bottom-right{position:fixed;bottom:0;right:0;width:240px;}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en',includedLanguages:'en,ta'},
+'google_translate_element');
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>Fun Zone 🎮</h4>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="bookingp.html">Booking</a>
+<a href="fun.html">Fun</a>
+<span style="margin-left:20px;color:white;">🌐</span>
+<span id="google_translate_element"></span>
+</nav>
+
+<div class="game-box">
+
+<h2>Guess the Number 🎯</h2>
+<p>Guess a number between 1 to 20</p>
+
+<input type="number" id="guess" placeholder="Enter number">
+<br>
+
+<button onclick="check()">Guess</button>
+<button onclick="reset()">Reset</button>
+
+<div id="msg"></div>
+<div id="attempts">Attempts: 0</div>
+
+</div>
+
+<script>
+let num = Math.floor(Math.random()*20)+1;
+let count = 0;
+
+function check(){
+let g = document.getElementById("guess").value;
+
+if(g === ""){
+document.getElementById("msg").innerHTML="⚠ Enter a number!";
+return;
+}
+
+count++;
+
+if(g == num){
+document.getElementById("msg").innerHTML="🎉 Correct!";
+document.getElementById("msg").classList.add("win");
+}else if(g > num){
+document.getElementById("msg").innerHTML="📉 Too High!";
+}else{
+document.getElementById("msg").innerHTML="📈 Too Low!";
+}
+
+document.getElementById("attempts").innerHTML="Attempts: " + count;
+}
+
+function reset(){
+num = Math.floor(Math.random()*20)+1;
+count = 0;
+document.getElementById("msg").innerHTML="";
+document.getElementById("attempts").innerHTML="Attempts: 0";
+document.getElementById("guess").value="";
+document.getElementById("msg").classList.remove("win");
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

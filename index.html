@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo 🚕</title>
+
+<link rel="stylesheet" href="fpp.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+
+body{top:0px !important;}
+
+.navbar{
+    background:#111;
+    padding:14px;
+    text-align:center;
+    font-family:"Poppins","Segoe UI",sans-serif;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-size:20px;
+    font-weight:600;
+    letter-spacing:0.5px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#FFD700;
+    transform:scale(1.1);
+}
+
+.navbar a.emoji{
+    font-size:22px;
+}
+
+#google_translate_element{
+    display:inline-block;
+}
+
+.goog-te-combo{
+    padding:5px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+});
+</script>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'en,ta'
+        },
+        'google_translate_element'
+    );
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>...On Time, Every Time...</h4>
+</div>
+
+<section class="hero">
+<h1>Welcome to RIDoo 🚖</h1>
+<p>Your ultimate ride companion</p>
+<button onclick="location.href='bookingp.html'">
+Book Ride Now
+</button>
+</section>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="loginp.html">Login</a>
+<a href="ser.html">Service</a>
+<a href="bookingp.html">Booking</a>
+<a href="abou.html">About Us</a>
+<a href="cont.html">Contact</a>
+<a href="fav.html" class="emoji">📍</a>
+<a href="fun.html" class="emoji">🎮</a>
+<span style="margin-left:15px;">
+🌐 <span id="google_translate_element"></span>
+</span>
+</nav>
+
+<section class="features">
+<div class="feature">
+<h3>⚡ Fast Pickup</h3>
+<p>Drivers arrive quickly wherever you are.</p>
+</div>
+
+<div class="feature">
+<h3>🛡 Safe Travel</h3>
+<p>Trusted drivers and secure rides.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Affordable Fare</h3>
+<p>Transparent and fair pricing.</p>
+</div>
+</section>
+
+<center>
+<div class="bbb">
+
+<h1>Book Your Ride</h1>
+<h5>Plan your journey easily</h5>
+
+<form>
+<table>
+
+<tr>
+<td>Date:</td>
+<td><input type="date"></td>
+</tr>
+
+<tr>
+<td>Time:</td>
+<td><input type="time"></td>
+</tr>
+
+<tr>
+<td>From:</td>
+<td><input type="text" placeholder="Pickup location"></td>
+</tr>
+
+<tr>
+<td>To:</td>
+<td><input type="text" placeholder="Destination"></td>
+</tr>
+
+<tr>
+<td></td>
+<td>
+<input type="button" value="Book"
+onclick="location.href='bookingp.html'">
+</td>
+</tr>
+
+</table>
+</form>
+
+</div>
+</center>
+
+<center>
+<div style="margin-top:20px;">
+
+<button onclick="location.href='offers.html'" 
+style="padding:10px 20px;margin:10px;background:#FFD700;border:none;border-radius:6px;cursor:pointer;">
+🎁 Offers
+</button>
+
+<button onclick="location.href='rating.html'" 
+style="padding:10px 20px;margin:10px;background:#FFD700;border:none;border-radius:6px;cursor:pointer;">
+⭐ Rating
+</button>
+
+<button onclick="location.href='tracking.html'" 
+style="padding:10px 20px;margin:10px;background:#FFD700;border:none;border-radius:6px;cursor:pointer;">
+📍 Track Ride
+</button>
+
+</div>
+</center>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo Rating ⭐</title>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI";margin:0;padding:0;}
+body{background:#f4f6f8;}
+
+.head{
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+text-align:center;
+padding-top:20px;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.navbar a:hover{
+color:#FFD700;
+}
+
+.goog-te-combo{
+padding:3px;
+border-radius:5px;
+font-size:12px;
+}
+
+.box{
+width:450px;
+background:white;
+margin:70px auto;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.driver{
+background:#f9f9f9;
+padding:15px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.star{
+font-size:35px;
+cursor:pointer;
+color:#ccc;
+transition:0.2s;
+}
+
+.star.active{
+color:#FFD700;
+}
+
+.rating-text{
+margin-top:10px;
+font-weight:bold;
+}
+
+textarea{
+width:100%;
+margin-top:15px;
+padding:10px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+button{
+margin-top:15px;
+padding:10px 20px;
+background:#FFD700;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#c9a100;
+color:white;
+}
+
+.bottom-left{
+position:fixed;
+bottom:0;
+left:0;
+width:240px;
+}
+
+.bottom-right{
+position:fixed;
+bottom:0;
+right:0;
+width:240px;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en',includedLanguages:'en,ta'},
+'google_translate_element');
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>Rate Your Ride</h4>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="bookingp.html">Booking</a>
+<a href="rating.html">Rating</a>
+<span style="margin-left:20px;color:white;">🌐</span>
+<span id="google_translate_element"></span>
+</nav>
+
+<div class="box">
+
+<h2>⭐ Rate Your Driver</h2>
+
+<div class="driver">
+<p><b>Driver:</b> Rajesh Kumar</p>
+<p><b>Vehicle:</b> TN 23 AB 4567</p>
+</div>
+
+<div id="stars">
+<span class="star" onclick="rate(1)">★</span>
+<span class="star" onclick="rate(2)">★</span>
+<span class="star" onclick="rate(3)">★</span>
+<span class="star" onclick="rate(4)">★</span>
+<span class="star" onclick="rate(5)">★</span>
+</div>
+
+<div class="rating-text" id="text">Select Rating</div>
+
+<textarea placeholder="Write your feedback"></textarea>
+
+<button onclick="submitReview()">Submit Review</button>
+
+</div>
+
+<script>
+function rate(n){
+let stars=document.querySelectorAll(".star");
+let text=document.getElementById("text");
+
+stars.forEach((s,i)=>{s.classList.toggle("active",i<n);});
+
+let msg=["Poor","Fair","Good","Very Good","Excellent"];
+text.innerHTML=msg[n-1];
+}
+
+function submitReview(){
+alert("⭐ Thank you for your feedback!");
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo Safety 🚨</title>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI";margin:0;padding:0;}
+body{background:#f4f6f8;}
+
+.head{
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+text-align:center;
+padding-top:20px;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+letter-spacing:0.5px;
+padding:6px 10px;
+border-radius:6px;
+}
+
+.navbar a:hover{
+color:#FFD700;
+}
+
+.goog-te-combo{
+font-size:12px;
+padding:2px;
+border-radius:5px;
+}
+
+.box{
+width:600px;
+margin:60px auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.sos{
+background:red;
+color:white;
+padding:15px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+width:100%;
+font-size:18px;
+font-weight:bold;
+}
+
+.tip{
+background:#f9f9f9;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+}
+
+.bottom-left{
+position:fixed;
+bottom:0;
+left:0;
+width:240px;
+}
+
+.bottom-right{
+position:fixed;
+bottom:0;
+right:0;
+width:240px;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en',includedLanguages:'en,ta'},
+'google_translate_element');
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>Safety Center 🚨</h4>
+</div>
+
+<nav class="navbar">
+<a href="index.html"> Home</a>
+<a href="bookingp.html"> Booking</a>
+<a href="safety.html"> Safety</a>
+<span id="google_translate_element"></span>
+</nav>
+
+<div class="box">
+
+<h2>🚨 Emergency Support</h2>
+
+<button class="sos" onclick="alert('🚨 Emergency Alert Sent!')">
+SOS HELP
+</button>
+
+<h3 style="margin-top:20px;">Safety Tips</h3>
+
+<div class="tip">✔ Share your ride details with family</div>
+<div class="tip">✔ Verify driver before boarding</div>
+<div class="tip">✔ Sit in the back seat</div>
+<div class="tip">✔ Use SOS in emergency</div>
+
+</div>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>

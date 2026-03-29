@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RIDoo Payment 💳</title>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+*{
+box-sizing:border-box;
+font-family:"Segoe UI", Arial, sans-serif;
+margin:0;
+padding:0;
+}
+
+body{
+background:#f4f6f8;
+text-align:center;
+}
+
+.head{
+height:120px;
+background:linear-gradient(90deg,#232526,#414345);
+color:#FFD700;
+padding-top:20px;
+}
+
+.navbar{
+background:#111;
+padding:14px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-size:17px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.navbar a:hover{
+color:#FFD700;
+}
+
+.goog-te-combo{
+padding:3px;
+border-radius:5px;
+font-size:12px;
+}
+
+.box{
+width:400px;
+margin:80px auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+h2{
+margin-bottom:20px;
+}
+
+.amount{
+font-size:22px;
+margin-bottom:20px;
+color:#333;
+}
+
+.pay-btn{
+width:100%;
+padding:12px;
+margin:8px 0;
+background:#FFD700;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.pay-btn:hover{
+background:#c9a100;
+color:white;
+}
+
+.home-btn{
+margin-top:15px;
+padding:10px 20px;
+background:#111;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.bottom-left{
+position:fixed;
+bottom:0;
+left:0;
+width:240px;
+}
+
+.bottom-right{
+position:fixed;
+bottom:0;
+right:0;
+width:240px;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit(){
+new google.translate.TranslateElement(
+{pageLanguage:'en',includedLanguages:'en,ta'},
+'google_translate_element');
+}
+</script>
+
+<div class="head">
+<h1>RIDoo</h1>
+<h4>Secure Payment 💳</h4>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="bookingp.html">Booking</a>
+<a href="payment.html">Payment</a>
+<span style="margin-left:20px;color:white;">🌐</span>
+<span id="google_translate_element"></span>
+</nav>
+
+<div class="box">
+
+<h2>Pay Your Fare</h2>
+
+<div class="amount" id="fareAmount"></div>
+
+<button class="pay-btn" onclick="pay()">💳 Pay via UPI</button>
+<button class="pay-btn" onclick="pay()">📱 Pay via GPay</button>
+<button class="pay-btn" onclick="pay()">💰 Pay via Paytm</button>
+
+<button class="home-btn" onclick="location.href='firstp.html'">
+🏠 Back to Home
+</button>
+
+</div>
+
+<script>
+let fare = localStorage.getItem("fare");
+
+if(!fare){
+fare = 100;
+}
+
+document.getElementById("fareAmount").innerHTML = "Amount to Pay: ₹" + fare;
+
+function pay(){
+let otp = Math.floor(1000 + Math.random()*9000);
+
+alert("✅ Payment Successful!");
+alert("📲 Your OTP: " + otp);
+alert("🚖 Ride Booked Successfully!");
+
+location.href="firstp.html";
+}
+</script>
+
+<img src="wibg-removebg-preview.png" class="bottom-left">
+<img src="wibgg-removebg-preview.png" class="bottom-right">
+
+</body>
+</html>
